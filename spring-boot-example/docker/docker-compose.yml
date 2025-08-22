@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  java-dev:
+    build:
+      context: ./java-dev-environment
+      dockerfile: Dockerfile
+    image: java-dev-environment
+    volumes:
+      - ../:/app
+    stdin_open: true
+    tty: true
+    restart: always
